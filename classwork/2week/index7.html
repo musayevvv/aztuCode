@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="index7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+
+<section>
+<div class="hearder">
+    <div class="logoBox">
+        <h2>First</h2>
+        <div class="pages">
+            <a href="#" class="active">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">SERVICES</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">CONTACT</a>
+        </div>
+    </div>
+    <div class="number">
+        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="num">120-240-9600</div>
+    </div>
+</div>
+</section>
+
+    <div class="container">
+        <div class="first-image">
+            <img src="https://www.yourtango.com/sites/default/files/image_blog/how-make-my-wife-happy.jpg" alt="">
+        </div>
+
+        <div class="second-div">
+            <div class="green-div">
+                <h1>My Story</h1>
+                <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="">
+            </div>
+
+            <div class="text">
+                <h1>a little bit about Joshua</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellendus et temporibus at sint sapiente, itaque dignissimos numquam officiis? Dicta, unde cum facere tempora officiis neque illum ipsa necessitatibus accusamus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quis hic id reprehenderit tempore eius odio ducimus odit dolore excepturi. Pariatur ipsa praesentium porro obcaecati. Amet dignissimos et doloribus ea?</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const items = document.querySelectorAll('a');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+
 </body>
 </html>
