@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hearder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 1px solid black;
+}
+
+.pages {
+    display: flex;
+    gap: 20px;
+
+    a {
+        text-decoration: none;
+        color: rgb(67, 67, 67);
+        font-size: 15px;
+    }
+}
+
+.iconBox {
+    display: flex;
+    gap: 15px;
+
+    i {
+        font-size: 18px;
+    }
+}
+
+.cardBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    justify-content: space-evenly;
+}
+
+.card {
+   width: 220px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 10px 0;
+    gap: 15px;
+    margin-top: 10px;
+
+}
+
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imgBox {
+   width: 90%;
+
+
+    img {
+        width: 100%;
+    }
+}
+
+.name{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.color{
+    color: rgb(81, 81, 81);
+}
+
+button{
+    background-color: rgb(111, 0, 170);
+    height: 50px;
+    width: 90%;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+}
+
+.hamburgerMenu{
+    display: none;
+    font-size: 28px;
+}
+@media only screen and (max-width: 576px) {
+   
+.pages , .iconBox{
+    display: none;
+}
+
+.hamburgerMenu{
+    display: block;
+}
+
+
+
+  }
+
+  @media only screen and (min-width: 800px)  {
+   
+  
+    .iconBox {
+        display: flex;
+        gap: 20px;
+    
+        i {
+            font-size: 20px;
+        }
+    }
+    
+
+    .pages {
+        display: flex;
+        gap: 20px;
+    
+        a {
+            text-decoration: none;
+            color: rgb(67, 67, 67);
+            font-size: 18px;
+        }
+    }
+
+      }
