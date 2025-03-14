@@ -1,0 +1,5 @@
+@mixin block ($color: $second-color) {
+    width: 200px;
+    height: 200px;
+    background-color: $color;
+}
