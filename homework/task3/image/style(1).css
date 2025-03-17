@@ -1,49 +1,6 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: Rocky Ahmed
-@URL: http://wethemez.com
-Author E-mail: rockybd1995@gmail.com
 
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
----------------------------------------------------- */
-/*=====================================================================
-@Template Name: Builder Construction 
-@Author: Rocky Ahmed
-@Developed By: Rocky Ahmed
-@Developer URL: http://rocky.wethemez.com
-Author E-mail: rockybd1995@gmail.com
-
-@Default Styles
-
-Table of Content:
-01/ Variables
-02/ predefin
-03/ header
-04/ button
-05/ banner
-06/ breadcrumb
-07/ about
-08/ team
-09/ project 
-10/ price 
-11/ team 
-12/ blog 
-13/ video  
-14/ features  
-15/ career  
-16/ contact 
-17/ footer
-
-=====================================================================*/
-/*----------------------------------------------------*/
-/*font Variables*/
-/*Color Variables*/
-/*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Poppins:200,300,400,500,600,700|Roboto:300,400,500,700");
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
+
 .list {
   list-style: none;
   margin: 0px;
@@ -100,8 +57,6 @@ button:focus {
   }
 }
 
-/* Main Title Area css
-============================================================================================ */
 .main_title {
   text-align: center;
   max-width: 720px;
@@ -124,10 +79,6 @@ button:focus {
   margin-bottom: 0px;
 }
 
-/* End Main Title Area css
-============================================================================================ */
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
 .header_area {
   position: absolute;
   width: 100%;
@@ -381,10 +332,6 @@ button:focus {
   right: 20px;
 }
 
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
-/* Home Banner Area css
-============================================================================================ */
 .home_banner_area {
   position: relative;
   z-index: 1;
@@ -573,18 +520,6 @@ button:focus {
   color: #fab700;
 }
 
-/* End Home Banner Area css
-============================================================================================ */
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
-/* Causes Area css
-============================================================================================ */
-
-/* End Causes Area css
-============================================================================================ */
-/*================= latest_blog_area css =============*/
-
-/*========= blog_categorie_area css ===========*/
 .blog_categorie_area {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1343,15 +1278,7 @@ button:focus {
   color: #777;
 }
 
-/*============ End Blog Single Styles  =============*/
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
-/* Reservation Form Area css
-============================================================================================ */
 
-/* End Reservation Form Area css
-============================================================================================ */
-/*============== contact_area css ================*/
 .mapBox {
   height: 420px;
   margin-bottom: 80px;
