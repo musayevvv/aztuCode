@@ -38,6 +38,12 @@ body {
     width: 100%;
 }
 
+.banner_inner{
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+
 .top_menu {
     margin: 0;
     border-bottom: 1px solid #eeeeee;
@@ -209,35 +215,39 @@ select:not(:-internal-list-box):not([multiple]) option {
 
 @media (max-width: 1199px) {
     .home_banner_area .banner_inner {
-     min-height: 0px !important;
-     margin-top: 0px !important;
+        min-height: 0px !important;
+        margin-top: 0px !important;
     }
 }
 
 @media (max-width: 991px) {
-    .header_area + section, .header_area + row, .header_area + div {
+
+    .header_area+section,
+    .header_area+row,
+    .header_area+div {
         margin-top: 0px !important;
     }
 }
 
 @media (max-width: 1024px) {
     .top_menu {
-        display: none; 
+        display: none;
     }
 
     .navbar_menu {
-        display: none; 
+        display: none;
 
-       
+
     }
 
-.main_menu nav .container{
+    .main_menu nav .container {
 
         display: flex;
         justify-content: space-between !important;
         padding: 0 50px;
 
-}
+    }
+
     .navbar_toggle {
         display: block !important;
         background-color: transparent;
@@ -248,16 +258,16 @@ select:not(:-internal-list-box):not([multiple]) option {
     }
 
     .navbar_menu.active {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         gap: 20px;
         position: absolute;
-        top: 70px; 
+        top: 70px;
         right: 0;
         background-color: #fff;
         width: 100%;
         padding: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .menu_list {
@@ -266,10 +276,17 @@ select:not(:-internal-list-box):not([multiple]) option {
     }
 
     .navbar_right {
-        display: none; 
+        display: none;
     }
 }
 
+.header_area{
+    margin-top: 0px !important;
+}
+
+.home_banner_area{
+    margin-top: 0px !important;
+}
 /* For mobile */
 @media (max-width: 768px) {
     .navbar_toggle {
@@ -914,6 +931,7 @@ select:not(:-internal-list-box):not([multiple]) option {
     color: #000;
     transform: scale(1.1);
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -938,6 +956,7 @@ select:not(:-internal-list-box):not([multiple]) option {
     }
 
     .social-icons {
-        margin-top: 20px;
-    }
+        margin-top: 20px;
+
+    }
 }
