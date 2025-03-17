@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.image {
+    width: 12%;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.main{}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.left h1 {
+    color: #1a237e !important;
+    font-size: 60px;
+    color: #060c3a;
+    margin-bottom: 30px;
+}
+
+.left p {
+    max-width: 500px;
+    margin-bottom: 60px;
+    font-size: 21px;
+    color: #1a237e !important;
+}
+
+.div{
+    display: flex;
+    gap: 20px;
+}
+
+.apple {
+    background-color: #3b5998;
+    display: flex;
+    align-items: center;
+    width: 185px;
+    height: 70px;
+    border-radius: 15px;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 15px;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+    span {
+        color: white;
+    }
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.first-span {
+    font-size: 11px;
+}
+
+.second-span {
+    font-size: 20px;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+}
+
+.right-image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: 100%;
+    }
+}
+
+
+.relative{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+ 
+
+.absolute{
+    width: 70%;
+    
+}
+
+
+@media screen and (max-width:960px) {
+.left{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}    
+.div{
+    display: flex;
+    justify-content: center;
+}
+}
