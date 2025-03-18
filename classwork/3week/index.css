@@ -139,6 +139,8 @@ nav {
         padding: 10px 20px;
         border: none;
         border-radius: 30px;
+        border: none;
+        border: 0;
     }
 
     .fa-globe {
