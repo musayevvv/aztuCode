@@ -22,6 +22,8 @@ ul {
     justify-content: space-around;
     gap: 190px;
     padding: 0px 40px;
+    position: static;
+    top: 0;
 }
 
 .pages {
@@ -424,12 +426,63 @@ div{
     }
 }
 
+.reverse .row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
 
 .row-reverse .row{
     display: flex;
     flex-direction: row-reverse !important;
-    margin-top: 30px;
+    margin-top: 60px;
+    align-items: center;
 }
+
+
+.red-zone{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.red-zone-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    h6{
+        color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    font-family: "Roboto", sans-serif
+    }
+
+    p{
+        font-size: 16px;
+    color: #d3d1d1;
+    line-height: 30px;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    width: 300px;
+    }
+
+    i{
+        font-size: 40px;
+        color: #ffff;
+        margin-bottom: 25px;
+        display: block;
+    }
+}
+
+
 
 
 @media only screen and (min-width: 1200px) {
