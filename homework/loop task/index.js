@@ -92,3 +92,5 @@
 //     number = prompt("ədəd daxil ele");
 //     number = parseInt(number);
 // } while (number < 50);
+
+
