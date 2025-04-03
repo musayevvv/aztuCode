@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("inp");
-    const bgColorInput = document.getElementById("bg-color");
-    const pointColorInput = document.getElementById("point-color");
+    const bgColor = document.getElementById("bg-color");
+    const pointColor = document.getElementById("point-color");
     const submitBtn = document.getElementById("submit");
     const board = document.getElementById("board");
   
-    function createCard(text, bgColor, pointColor) {
+    function createCard(input, bgColor, pointColor) {
       const card = document.createElement("div");
       card.classList.add("card");
       card.style.backgroundColor = bgColor;
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const textDiv = document.createElement("div");
       textDiv.classList.add("text");
       const span = document.createElement("span");
-      span.textContent = text;
+      
+      span.textContent = input;
       textDiv.appendChild(span);
   
       const deleteBtn = document.createElement("button");
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     submitBtn.addEventListener("click", function () {
       if (input.value.trim() !== "") {
-        createCard(input.value, bgColorInput.value, pointColorInput.value);
+        createCard(input.value, bgColor.value, pointColor.value);
         input.value = "";
       }
     });
