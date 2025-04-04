@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Səbət</title>
+    <style>
+        .card {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+            margin-top: 20px;
+            position: relative;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image {
+            height: 150px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex-grow: 1;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 5px;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        button {
+            border: 0;
+            height: 45px;
+            background-color: skyblue;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sizin Səbətiniz</h1>
+    <div id="basket-box"></div>
+
+    <script src="basket.js"></script>
+</body>
+
+</html>
