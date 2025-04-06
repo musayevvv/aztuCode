@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .category {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .category button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .category button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Categories</h1>
+    <div>
+        <h2>Yeni Kategoriya əlavə et</h2>
+        <input type="text" id="title" placeholder="Başlıq" />
+        <input type="text" id="description" placeholder="Açıqlama" />
+        <button onclick="addCategory()">Göndər</button>
+    </div>
+    <div id="categories-list">
+
+    </div>
+
+    <script>
+      
+        function fetchCategories() {
+            fetch('https://northwind.vercel.app/api/categories')
+                .then(response => response.json())
+                .then(data => {
+                    const categoriesList = document.getElementById('categories-list');
+                    categoriesList.innerHTML = '';
+                    data.forEach(category => {
+                        const categoryElement = document.createElement('div');
+                        categoryElement.classList.add('category');
+                        categoryElement.innerHTML = `
+                            <strong>${category.title}</strong><br>
+                            ${category.description}
+                            <button onclick="deleteCategory(${category.id})">Sil</button>
+                        `;
+                        categoriesList.appendChild(categoryElement);
+                    });
+                })
+                .catch(error => console.error('Xəta:', error));
+        }
+
+        function addCategory() {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+
+            if (!title || !description) {
+                alert("Başlıq və açıqlama boş ola bilməz!");
+                return;
+            }
+
+            const category = {
+                title: title,
+                description: description
+            };
+
+            fetch('https://northwind.vercel.app/api/categories', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(category)
+            })
+            .then(response => response.json())
+            .then(() => {
+                fetchCategories(); // Yeni kategoriya əlavə edildikdən sonra təzələyirik
+                document.getElementById('title').value = ''; 
+                document.getElementById('description').value = '';
+            })
+            .catch(error => console.error('Xəta:', error));
+        }
+
+  
+        function deleteCategory(id) {
+            fetch(`https://northwind.vercel.app/api/categories/${id}`, {
+                method: 'DELETE'
+            })
+            .then(() => {
+                fetchCategories(); // Kategoriya silindikdən sonra təzələyirik
+            })
+            .catch(error => console.error('Xəta:', error));
+        }
+
+  
+        window.onload = fetchCategories;
+    </script>
+</body>
+</html>
