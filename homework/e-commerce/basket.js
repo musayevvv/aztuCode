@@ -1,29 +1,32 @@
 function loadFromLocalStorage() {
-    const product = JSON.parse(localStorage.getItem("selectedProduct"));
+    const products = JSON.parse(localStorage.getItem("selectedProducts")) || [];
+    const basketBox = document.getElementById("basket-box");
 
-    if (product) {
-        const basketBox = document.getElementById("basket-box");
+    basketBox.innerHTML = "";
 
-        basketBox.innerHTML = `
-            <div class="card">
-                <div class="image">
-                    <img src="${product.image}" alt="${product.title}">
+    if (products.length > 0) {
+        products.forEach(product => {
+            basketBox.innerHTML += `
+                <div class="card">
+                    <div class="image">
+                        <img src="${product.image}" alt="${product.title}">
+                    </div>
+                    <div class="body">
+                        <div class="title"><h3>Title: ${product.title}</h3></div>
+                        <div class="price">Price: $${product.price}</div>
+                        <button button onclick = "clearBasket()" > Səbəti Təmizlə</button >
+                    </div>
                 </div>
-                <div class="body">
-                    <div class="title"><h3>Title: ${product.title}</h3></div>
-                    <div class="price">Price: $${product.price}</div>
-                </div>
-                <button onclick="clearBasket()">Səbəti Təmizlə</button>
-            </div>
-        `;
+            `;
+        });
     } else {
-        document.getElementById("basket-box").innerHTML = "<p>Səbət boşdur.</p>";
+        basketBox.innerHTML = "<p>Səbət boşdur.</p>";
     }
 }
 
 function clearBasket() {
-    localStorage.removeItem("selectedProduct");
-    loadFromLocalStorage(); 
+    localStorage.removeItem("selectedProducts");
+    loadFromLocalStorage();
 }
 
 loadFromLocalStorage();

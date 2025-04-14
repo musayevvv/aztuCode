@@ -21,14 +21,27 @@ function displayProducts(products) {
 
 
     products.forEach(product => {
-        cardBox.innerHTML += `<div class="card">
+        cardBox.innerHTML += ` <div class="card">
             <div class="image"><img src="${product.image}" alt=""></div>
             <div class="body">
-                <div class="title"><h3>Title:${product.title}</h3></div>
-                <div class="price">Price:${product.price}</div>           
-          </div>
-          <button data-id="${product.id}" class="btn">Ətraflı</button>
-
+                <div class="card-title"><p>${product.title}</p></div>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #000000;"></i>
+                    <i class="fa-solid fa-star" style="color: #000000;"></i>
+                    <i class="fa-solid fa-star" style="color: #000000;"></i>
+                    <i class="fa-solid fa-star" style="color: #000000;"></i>
+                    <i class="fa-solid fa-star-half-stroke" style="color: #000000;"></i>
+                </div>
+                <div class="price-box">
+                    <div class="price">$${product.price}</div>  
+                    <div class="colors">
+                        <div class="color red"></div>
+                        <div class="color blue"></div>
+                        <div class="color green"></div>
+                    </div>
+                </div>           
+            </div>
+            <button data-id="${product.id}" class="btn">BUY NOW</button>
         </div>`
     });
 

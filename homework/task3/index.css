@@ -955,3 +955,15 @@ select:not(:-internal-list-box):not([multiple]) option {
 
     }
 }
+
+@media (max-width: 1112px) {
+  .team_inner{
+ gap: 180px;
+  }
+}
+
+@media (max-width:991px) {
+    .team_inner{
+   gap: 110px;
+    }
+  } 
